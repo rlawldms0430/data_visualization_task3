@@ -15,7 +15,7 @@ st.write("### Step 1: Load Birth Rate Data")
 
 try:
     # 엑셀 데이터 로드
-    birth_data = pd.read_excel('/Users/kje/Desktop/code/합계출산율.xlsx',header=[0, 1])
+    birth_data = pd.read_excel('/합계출산율.xlsx',header=[0, 1])
     # 필요한 컬럼만 선택
     birth_data = birth_data[[('행정구역별', '행정구역별'), ('2023', '합계출산율 (가임여성 1명당 명)')]]
 
@@ -43,7 +43,7 @@ except Exception as e:
 
 # Step 2: 한국 시도 GeoJSON 데이터 불러오기
 st.write("### Step 2: Load GeoJSON Data")
-geojson_path = '/Users/kje/Desktop/code/TL_SCCO_CTPRVN.json'
+geojson_path = '/TL_SCCO_CTPRVN.json'
 
 try:
     # GeoJSON 데이터 로드
